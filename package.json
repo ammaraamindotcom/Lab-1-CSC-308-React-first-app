@@ -9,7 +9,10 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+ "scripts": {
+  "dev": "npm --workspace=packages/react-frontend run dev",
+  "build": "npm --workspace=packages/react-frontend run build",
+  "lint": "npm --workspace=packages/react-frontend run lint",
+  "test": "echo \"Error: no test specified\" && exit 1"
+ }
 }
