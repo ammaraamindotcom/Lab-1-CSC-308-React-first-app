@@ -16,22 +16,22 @@ function TableHeader() {
     const rows = props.characterData.map((row, index) => {
       return (
         <tr key={index}>
-            <td>{row.name}</td>
-            <td>{row.job}</td>
-            <td>
-                <button onClick={() => props.removeCharacter(index)}>
-                Delete
-                </button>
-            </td>
+          <td>{row.name}</td>
+          <td>{row.job}</td>
+          <td>
+            <button onClick={() => props.removeCharacter(row.id)}>
+              Delete
+            </button>
+          </td>
         </tr>
       );
-     }
-    );
+    });
+  
     return (
-        <tbody>
-          {rows}
-         </tbody>
-     );
+      <tbody>
+        {rows}
+      </tbody>
+    );
   }
 
   function Table(props) {
