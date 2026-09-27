@@ -13,7 +13,7 @@ function MyApp() {
         .then((res) => {
           if (res.status === 204) {
             setCharacters(
-              characters.filter((character) => character.id !== id)
+              characters.filter((character) => character._id !== id)
             );
           } else {
             console.log("Delete failed");
